@@ -1,0 +1,116 @@
+site:
+  title: Teleport — Immersive movie experience
+  lang: en
+
+hero:
+  logo: assets/logo.svg
+  location: Singapore
+  title: Immersive movie experience, staged in the real world
+  subtitle: One day in Singapore. A sequence of events written around you.
+  cta: Request a screening
+  menu:
+    - label: Principles
+      href: "#experience"
+    - label: Why
+      href: "#why"
+    - label: Archive
+      href: "#archive"
+    - label: How we do it
+      href: "#process"
+    - label: Formats
+      href: "formats.html"
+    - label: Screening
+      href: "#screening"
+
+product:
+  items:
+    - title: You do not watch the story. You step inside it.
+      text: The city becomes a sequence. People become cues. Ordinary moments begin to behave like scenes.
+      image: assets/scale.png
+      note_label: PRINCIPLE 01
+      note_text: 19:12. The room stays casual. Five people already know your name.
+    - title: The route moves through places that do not announce themselves.
+      text: A bar. A gallery. A hotel lobby. A car waiting at the wrong entrance. Each location opens the next layer.
+      image: assets/initiation.png
+      note_label: PRINCIPLE 02
+      note_text: 20:03. Exit through the side door. Do not explain where you are going.
+    - title: The actors do not look like actors.
+      text: A bartender. A guest. A woman near the elevator. A stranger who says one precise thing and disappears.
+      image: assets/glitch.png
+      note_label: PRINCIPLE 03
+      note_text: 20:41. He places the note on the counter and walks away before you ask a question.
+    - title: Reality starts cooperating with the script.
+      text: Familiar situations tilt. Coincidences arrive too perfectly. What felt routine begins to carry intent.
+      image: assets/point_of_no_return_before.png
+      note_label: PRINCIPLE 04
+      note_text: 21:06. She apologizes, says your name, and continues as if this had already happened before.
+    - title: The line between staged and real stops mattering.
+      text: The point is not whether you can decode the setup. The point is the moment certainty becomes useless.
+      image: assets/point_of_no_return_after.png
+      note_label: PRINCIPLE 05
+      note_text: 21:40. Verification is no longer the priority. Continue forward.
+
+why:
+  items:
+    - title: The luxury of being surprised
+      text: When you control most things in your life, the rarest luxury is to be genuinely surprised. To let go. To step out of the role you usually play, drop the armor, and experience a safe break in the system.
+    - title: Insight through immersion
+      text: Real business insight does not come from boardrooms, workshops, or another predictable offsite. It happens when reality bends, the script breaks, and you are forced to respond differently in real time.
+    - title: Private Singapore
+      text: Not the city from guidebooks. A hidden Singapore reached through side streets, back rooms, private spaces, and staged coincidences. A story you can only live through — then unpack behind closed doors.
+
+archive:
+  title: Previous legends. Classified after the fact.
+  text: We do not spoil your story. We only show what reality looked like after it broke.
+  items:
+    - title: The Gallery Incident
+      text: "She entered a gallery to wait out the rain. On the walls: photographs from a life no one should have known."
+      image: assets/initiation.png
+      meta: CASE 01
+    - title: The Conference Interruption
+      text: A formal business event fractured with staged labor, a disappearing painting, and witnesses who never agreed on what happened.
+      image: assets/point_of_no_return_before.png
+      meta: CASE 02
+    - title: Point of No Return
+      text: "19:00, a negotiation dinner. 21:40, the same guest running through the park in black tie with a million-dollar canvas under his arm."
+      image: assets/point_of_no_return_after.png
+      meta: CASE 03
+
+process:
+  items:
+    - step: "01"
+      title: Screening
+      text: A closed interview. No deck. No performance. We map your context, your patterns, your pressure points, and what reality currently feels too fixed.
+    - step: "02"
+      title: Adaptation
+      text: We take one of our base narratives and pull your details into it. A phrase, a habit, a fear, a memory. The story starts recognizing you.
+    - step: "03"
+      title: Production
+      text: For one day, Singapore becomes a live set. Locations activated. Cast briefed. Timing calibrated to the minute. The city still looks untouched.
+    - step: "04"
+      title: Revelation
+      text: At the final point, the script stops. Masks come off. You see what was placed, what was real, and what changed in the process.
+
+formats:
+  items:
+    - name: Episode
+      duration: 4 hours
+      locations: 3 locations
+      description: A compressed arc for one person or a pair. Fast escalation. Precise emotional turn.
+      price: "from 5,000 USD"
+    - name: Feature
+      duration: Full day
+      locations: 7 locations
+      description: A deeper city-scale narrative for partners, founders, or close collaborators. Separate beats. Shared reveal.
+      price: "from 15,000 USD"
+    - name: Blockbuster
+      duration: Full day
+      locations: City-scale
+      description: A large-format production for a leadership team. Coordinated across multiple locations, roles, and narrative layers.
+      price: "from 50,000 USD"
+
+final:
+  eyebrow: FINAL OFFER
+  title: We do not sell tickets. We choose protagonists.
+  text: Leave a request for a private screening interview.
+  cta: Request a screening

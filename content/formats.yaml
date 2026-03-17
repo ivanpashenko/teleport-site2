@@ -1,0 +1,49 @@
+site:
+  title: Teleport — Entry
+
+hero:
+  logo: assets/logo.svg
+  location: Singapore
+  title: Three ways to enter the story.
+  subtitle: We do not mass-produce experiences. We stage the right scale for the right protagonist.
+  cta: Request an introduction
+  menu:
+    - label: Principles
+      href: "index.html#experience"
+    - label: Why
+      href: "index.html#why"
+
+    - label: Process
+      href: "index.html#process"
+    - label: Q&A
+      href: "index.html#faq"
+    - label: Entry
+      href: "formats.html"
+
+formats:
+  intro_title: One entrance. Three scales.
+  intro_text: One narrative framework, expanded through different levels of depth, duration, and city-scale production.
+  intro_cta: Learn more
+  intro_href: index.html#experience
+  items:
+    - name: Episode
+      duration: 4 hours
+      locations: 3 locations
+      description: A compressed arc for one person, a pair, or a small group. Fast escalation. Precise emotional turn. Built for clarity, reset, or a decisive shift in perspective.
+      price: "from 5,000 USD"
+    - name: Feature
+      duration: Full day
+      locations: 7 locations
+      description: A deeper city-scale narrative with more time, more layers, and a wider emotional arc. Designed for people who want the experience to unfold gradually and land harder.
+      price: "from 15,000 USD"
+    - name: Blockbuster
+      duration: Full day
+      locations: City-scale
+      description: A large-format production with multiple narrative layers, moving parts, and coordinated reveals. The broadest version of the experience, built for maximum scale and shared impact.
+      price: "from 50,000 USD"
+
+final:
+  eyebrow: READY TO BEGIN
+  title: We do not sell tickets. We shift reality.
+  text: Leave a request for a private introduction.
+  cta: Request an introduction
