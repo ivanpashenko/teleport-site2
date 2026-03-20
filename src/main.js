@@ -1,6 +1,7 @@
 import './components/base-section.js';
 import './components/hero-block.js';
 import './components/hero-menu.js';
+import './components/site-header.js';
 import './components/grid-list.js';
 import './components/format-card.js';
 import './components/site-footer.js';
@@ -292,13 +293,19 @@ async function init() {
   app.innerHTML = `
     <div class="min-h-screen bg-[var(--bg)] text-[var(--text)] antialiased selection:bg-white selection:text-black">
       <div class="pointer-events-none fixed inset-0 opacity-10 mix-blend-soft-light" style="background-image:url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"140\" height=\"140\" viewBox=\"0 0 140 140\"><filter id=\"n\"><feTurbulence type=\"fractalNoise\" baseFrequency=\"0.85\" numOctaves=\"2\" stitchTiles=\"stitch\"/></filter><rect width=\"140\" height=\"140\" filter=\"url(%23n)\" opacity=\"0.45\"/></svg>');"></div>
-      <hero-block
+      <site-header
+        menu='${JSON.stringify(data.hero.menu || [])}'
         logo="${data.hero.logo}"
         location="${data.hero.location}"
+        brand-href="index.html"
+        right-label="Entry"
+        right-href="formats.html"
+        fixed="true"
+      ></site-header>
+      <hero-block
         title="${data.hero.title}"
         subtitle="${data.hero.subtitle}"
         cta="${data.hero.cta}"
-        menu='${JSON.stringify(data.hero.menu || [])}'
       ></hero-block>
 
       <section-title label="Principles"></section-title>
@@ -312,22 +319,25 @@ async function init() {
           text="${data.why.text || ''}"
           items='${JSON.stringify(data.why.items)}'
         ></why-block>
-        <div style="text-align:center; padding:3rem 0 5rem">
-          <a href="formats.html" style="display:inline-block; border:1px solid rgba(255,255,255,0.2); padding:1rem 2.5rem; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#fff; text-decoration:none; transition:background 200ms,color 200ms" onmouseover="this.style.background='#fff';this.style.color='#000'" onmouseout="this.style.background='transparent';this.style.color='#fff'">View entry options</a>
-        </div>
       </div>
 
 
+
+      <div id="testimonials">
+        <section-title label="Testimonials"></section-title>
+        <reviews-strip
+          title="Testimonials"
+          items='${JSON.stringify(data.reviews.items)}'
+        ></reviews-strip>
+      </div>
 
       <div id="process">
         <section-title label="Process"></section-title>
         <process-steps items='${JSON.stringify(data.process.items)}'></process-steps>
+        <div style="text-align:center; padding:3rem 0 5rem">
+          <a href="formats.html" style="display:inline-block; border:1px solid rgba(255,255,255,0.2); padding:1rem 2.5rem; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#fff; text-decoration:none; transition:background 200ms,color 200ms" onmouseover="this.style.background='#fff';this.style.color='#000'" onmouseout="this.style.background='transparent';this.style.color='#fff'">View entry options</a>
+        </div>
       </div>
-
-      <reviews-strip
-        title="${data.reviews.title}"
-        items='${JSON.stringify(data.reviews.items)}'
-      ></reviews-strip>
 
       <div id="faq">
         <section-title label="${data.faq.title}"></section-title>

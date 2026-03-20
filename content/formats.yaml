@@ -6,7 +6,7 @@ hero:
   location: Singapore
   title: Three ways to enter the story.
   subtitle: We do not mass-produce experiences. We stage the right scale for the right protagonist.
-  cta: Request an introduction
+  cta: Request
   menu:
     - label: Principles
       href: "index.html#experience"
@@ -21,8 +21,8 @@ hero:
       href: "formats.html"
 
 formats:
-  intro_title: One entrance. Three scales.
-  intro_text: One narrative framework, expanded through different levels of depth, duration, and city-scale production.
+  intro_title: Three ways to enter the story.
+  intro_text: We do not mass-produce experiences. We stage the right scale for the right protagonist.
   intro_cta: Learn more
   intro_href: index.html#experience
   items:
@@ -46,4 +46,4 @@ final:
   eyebrow: READY TO BEGIN
   title: We do not sell tickets. We shift reality.
   text: Leave a request for a private introduction.
-  cta: Request an introduction
+  cta: Request

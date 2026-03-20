@@ -50,41 +50,24 @@ product:
       note_text: 21:40. Verification is no longer the priority. Continue forward.
 
 why:
-  title: Why enter it
-  text: Not entertainment. A controlled rupture in routine that reveals how people think, react, and reframe what matters.
+  title: What changes
+  text: Not for entertainment. For perspective, surprise, and a break in the pattern of how you think, decide, and move through the world.
   items:
     - title: Break the pattern
       text: For a few hours, the usual identities fall away. People are no longer entering the room as the roles they always play. Place a group inside an unfamiliar reality, and new instincts, new dynamics, and new possibilities begin to surface.
-      image: assets/scale.png
+      image: assets/archive-interruption.png
       note_label: WHY 01
       note_text: Routine loses authority first. Then the person inside it changes shape.
     - title: Insight through immersion
       text: Real business insight does not come from boardrooms, workshops, or another predictable offsite. It happens when reality bends, the script breaks, and you are forced to respond differently in real time.
-      image: assets/initiation.png
+      image: assets/archive-recognition.png
       note_label: WHY 02
       note_text: Strategy becomes visible only after certainty stops leading.
     - title: Private Singapore
       text: Not the city from guidebooks. A hidden Singapore reached through side streets, back rooms, private spaces, and staged coincidences. A story you can only live through — then unpack behind closed doors.
-      image: assets/point_of_no_return_before.png
+      image: assets/archive-point-no-return.png
       note_label: WHY 03
       note_text: The city behaves differently when it has been written around you.
-
-archive:
-  title: One framework. Three different scales of reality shift.
-  text: We use the same underlying mechanics to build entirely different atmospheres. Depending on your context, the experience can take one of these directions.
-  items:
-    - title: The Interruption
-      text: 18:40. A dinner, briefing, or conference proceeds as planned until one detail lands wrong. The room keeps moving. You realize part of it is already scripted.
-      image: assets/initiation.png
-      meta: BUSINESS / FORMAL
-    - title: The Recognition
-      text: You step into an ordinary place to wait, reset, or disappear for a minute. Something inside recognizes you before it should. The day stops feeling anonymous.
-      image: assets/point_of_no_return_before.png
-      meta: PRIVATE / INTIMATE
-    - title: Point of No Return
-      text: 19:00 negotiation. 21:40 movement. The evening breaks into decisions, detours, and urgency. By then, clarity matters less than momentum.
-      image: assets/point_of_no_return_after.png
-      meta: NIGHT / ESCALATION
 
 process:
   items:
@@ -122,12 +105,15 @@ formats:
 reviews:
   title: Private reactions
   items:
-    - quote: Teleport created a real but redesigned world that revolved around my sister. A celebration of all that she is and an inspiration for what she wants to be. It was beautiful and magical, and impossible. I think it’s the greatest gift I could have given her. I don’t know how they did. She said it was the happiest day of her life.
+    - headline: Beautiful, magical and impossible
+      quote: Teleport created a real but redesigned world that revolved around my sister. A celebration of all that she is and an inspiration for what she wants to be. It was beautiful and magical, and impossible. I think it’s the greatest gift I could have given her. I don’t know how they did. She said it was the happiest day of her life.
       author: Martina Klingvall — Founder and CEO, Telness Group
-    - quote: I wanted my company to be able to imagine the future. Because if you can imagine it, you can build it. Teleport allowed us to travel into the future. To see all that we can be, made us fearless. It was amazing. I think we’re all changed by it.
+    - headline: Teleport is visionary and playful
+      quote: Teleport is visionary and playful and reawakens, at an essential level, what it is to be human.
+      author: David Glass — One of the UK’s most prominent Theatre Directors
+    - headline: It allowed us to travel into the future
+      quote: I wanted my company to be able to imagine the future. Because if you can imagine it, you can build it. Teleport allowed us to travel into the future. To see all that we can be, made us fearless. It was amazing. I think we’re all changed by it.
       author: Jonas Antonsson — Co-Founder & CEO, Raw Fury
-    - quote: Teleport is visionary and playful and reawakens, at an essential level, what it is to be human.
-      author: David Glass — Theatre Director
 
 faq:
   title: Q&A

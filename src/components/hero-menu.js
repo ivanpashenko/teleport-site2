@@ -42,18 +42,18 @@ class HeroMenu extends HTMLElement {
     const backdrop = this.querySelector('.hero-menu-backdrop');
     const close = this.querySelector('.hero-menu-close');
     const links = [...this.querySelectorAll('.hero-menu-link')];
-    const host = this.closest('hero-block') || this;
-    const hostOpenClass = side === 'right' ? 'menu-open-right' : 'menu-open';
+    const host = this;
+    const openClass = side === 'right' ? 'menu-open-right' : 'menu-open';
 
     const openMenu = () => {
-      host.classList.add(hostOpenClass);
+      host.classList.add(openClass);
       burger?.setAttribute('aria-expanded', 'true');
       menuPanel?.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
     };
 
     const closeMenu = () => {
-      host.classList.remove(hostOpenClass);
+      host.classList.remove(openClass);
       burger?.setAttribute('aria-expanded', 'false');
       menuPanel?.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = '';

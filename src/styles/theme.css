@@ -242,13 +242,13 @@
   transition: transform 220ms ease, opacity 220ms ease;
 }
 
-hero-block.menu-open .hero-menu,
-hero-block.menu-open-right .hero-menu {
+hero-menu.menu-open .hero-menu,
+hero-menu.menu-open-right .hero-menu {
   transform: translateX(0);
 }
 
-hero-block.menu-open .hero-menu-backdrop,
-hero-block.menu-open-right .hero-menu-backdrop {
+hero-menu.menu-open .hero-menu-backdrop,
+hero-menu.menu-open-right .hero-menu-backdrop {
   opacity: 1;
   pointer-events: auto;
 }
@@ -279,8 +279,8 @@ hero-block.menu-open-right .hero-menu-backdrop {
 
 .process-step__glow {
   background:
-    radial-gradient(88% 190% at 50% 100%, var(--process-glow) 0%, var(--process-glow) 18%, var(--process-glow-soft) 46%, transparent 78%),
-    radial-gradient(40% 96% at 50% 100%, var(--process-glow-core) 0%, var(--process-glow-soft) 34%, transparent 82%);
+    radial-gradient(56% 190% at var(--process-glow-center, 50%) 100%, var(--process-glow) 0%, var(--process-glow) 18%, var(--process-glow-soft) 46%, transparent 78%),
+    radial-gradient(26% 96% at var(--process-glow-center, 50%) 100%, var(--process-glow-core) 0%, var(--process-glow-soft) 34%, transparent 82%);
   opacity: 1;
   filter: blur(24px);
 }

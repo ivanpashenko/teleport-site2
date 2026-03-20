@@ -1,5 +1,5 @@
-import './components/hero-block.js';
 import './components/hero-menu.js';
+import './components/site-header.js';
 import './components/formats-grid.js';
 import './components/section-title.js';
 import './components/site-footer.js';
@@ -19,14 +19,16 @@ async function init() {
     <div class="min-h-screen bg-[var(--bg)] text-[var(--text)] antialiased selection:bg-white selection:text-black">
       <div class="pointer-events-none fixed inset-0 opacity-10 mix-blend-soft-light" style="background-image:url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"140\" height=\"140\" viewBox=\"0 0 140 140\"><filter id=\"n\"><feTurbulence type=\"fractalNoise\" baseFrequency=\"0.85\" numOctaves=\"2\" stitchTiles=\"stitch\"/></filter><rect width=\"140\" height=\"140\" filter=\"url(%23n)\" opacity=\"0.45\"/></svg>');"></div>
 
-      <hero-block
+      <site-header
+        menu='${JSON.stringify(data.hero.menu || [])}'
         logo="${data.hero.logo}"
         location="${data.hero.location}"
-        title="${data.hero.title}"
-        subtitle="${data.hero.subtitle}"
-        cta="${data.hero.cta}"
-        menu='${JSON.stringify(data.hero.menu || [])}'
-      ></hero-block>
+        brand-href="index.html"
+        right-label="${data.hero.cta}"
+        right-href="#screening"
+        fixed="false"
+        overlay="false"
+      ></site-header>
 
       <section-title label="Entry"></section-title>
       <formats-grid
