@@ -10,20 +10,20 @@ class SiteHeader extends HTMLElement {
     const overlay = this.getAttribute('overlay') !== 'false';
     const shellClass = fixed ? 'fixed inset-x-0 top-0 z-30' : 'relative z-20';
     const bgClass = overlay
-      ? 'bg-[linear-gradient(180deg,rgba(0,0,0,0.94)_0%,rgba(0,0,0,0.72)_28%,rgba(0,0,0,0.34)_58%,rgba(0,0,0,0)_100%)]'
+      ? 'bg-[linear-gradient(180deg,rgba(0,0,0,0.98)_0%,rgba(0,0,0,0.85)_30%,rgba(0,0,0,0.45)_65%,rgba(0,0,0,0)_100%)]'
       : '';
 
     this.innerHTML = `
       <header class="${shellClass} ${bgClass}">
-        <div class="flex items-start justify-between px-6 py-6 md:px-10 md:py-8">
+        <div class="absolute inset-0 z-0 backdrop-blur-[2px] mask-image-[linear-gradient(180deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_100%)] pointer-events-none" style="-webkit-mask-image: linear-gradient(180deg, black 60%, transparent 100%);"></div>
+        <div class="relative z-10 flex items-start justify-between px-6 py-6 md:px-10 md:py-8">
           <hero-menu items='${JSON.stringify(menu)}' side="left"></hero-menu>
 
-          <a href="${brandHref}" class="absolute left-1/2 top-6 -translate-x-1/2 flex flex-col items-center text-center no-underline md:top-8">
-            <img src="${logo}" alt="Teleport" class="hero-logo-image h-3 w-auto md:h-4" />
-            ${location ? `<p class="mt-2 text-[9px] uppercase tracking-[0.38em] text-white/50">${location}</p>` : ''}
+          <a href="${brandHref}" class="absolute left-1/2 top-6 -translate-x-1/2 flex flex-col items-center text-center no-underline md:top-8 pointer-events-auto">
+            <img src="${logo}" alt="Teleport" class="hero-logo-image h-7 w-auto md:h-8" />
           </a>
 
-          <a href="${rightHref}" class="inline-block px-2 py-1 text-[11px] uppercase tracking-[0.28em] text-white/72 transition hover:text-white">${rightLabel}</a>
+          <a href="${rightHref}" class="inline-block px-2 py-1 text-xs uppercase tracking-[0.28em] text-primary transition hover:text-primary pointer-events-auto">${rightLabel}</a>
         </div>
       </header>
     `;

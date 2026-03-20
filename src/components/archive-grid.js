@@ -8,8 +8,8 @@ class ArchiveGrid extends HTMLElement {
       <section class="py-28 md:py-36">
         <div class="mx-auto max-w-7xl px-6 md:px-10">
           <div class="mb-14 max-w-3xl md:mb-20">
-            <h2 class="font-display text-5xl leading-[0.98] text-white md:text-7xl">${title}</h2>
-            <p class="mt-6 max-w-2xl text-base leading-relaxed text-white/55 md:text-lg">${intro}</p>
+            <h2 class="font-display text-5xl leading-tight text-primary md:text-6xl">${title}</h2>
+            <p class="mt-6 max-w-2xl text-sm leading-relaxed text-faded md:text-md">${intro}</p>
           </div>
 
           <div class="grid gap-8 md:grid-cols-3 md:gap-10">
@@ -22,9 +22,9 @@ class ArchiveGrid extends HTMLElement {
                 </div>
 
                 <div class="absolute inset-x-0 bottom-0 p-6 md:p-8">
-                  <p class="mb-3 text-[10px] uppercase tracking-[0.28em] text-white/45">${item.meta}</p>
-                  <h3 class="max-w-[12ch] font-display text-3xl leading-[1.02] text-white md:text-[2.5rem]">${item.title}</h3>
-                  <p class="mt-4 max-w-[28ch] text-sm leading-[1.65] text-white/62 md:text-[15px]">${item.text}</p>
+                  <p class="mb-3 text-xs uppercase tracking-[0.28em] text-faded">${item.meta}</p>
+                  <h3 class="max-w-[12ch] font-display text-2xl leading-tight text-white md:text-2xl">${item.title}</h3>
+                  <p class="mt-4 max-w-[28ch] text-xs leading-relaxed text-faded md:text-sm">${item.text}</p>
                 </div>
               </article>
             `).join('')}

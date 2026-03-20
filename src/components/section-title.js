@@ -7,9 +7,9 @@ class SectionTitle extends HTMLElement {
     this.innerHTML = `
       <div class="border-t border-white/10 py-16 text-center md:py-24">
         <div class="mx-auto max-w-5xl px-6 md:px-10">
-          <h2 class="font-display text-[clamp(4rem,12vw,10rem)] leading-none tracking-tight text-white">${label}</h2>
-          ${title ? `<h3 class="mx-auto mt-8 max-w-4xl font-display text-3xl leading-[0.98] text-white md:text-5xl">${title}</h3>` : ''}
-          ${subtitle ? `<p class="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-white/68 md:text-base">${subtitle}</p>` : ''}
+          <h2 class="font-display text-hero leading-tight tracking-tight text-primary">${label}</h2>
+          ${title ? `<h3 class="mx-auto mt-8 max-w-4xl font-display text-2xl leading-tight text-primary md:text-5xl">${title}</h3>` : ''}
+          ${subtitle ? `<p class="mx-auto mt-5 max-w-2xl text-xs leading-relaxed text-faded md:text-sm">${subtitle}</p>` : ''}
         </div>
       </div>
     `;

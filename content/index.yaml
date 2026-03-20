@@ -5,8 +5,8 @@ site:
 hero:
   logo: assets/logo.svg
   location: Singapore
-  title: Immersive experience, staged in the real world
-  subtitle: One day in Singapore. A sequence of events written around you.
+  title: A real-world immersive experience designed to shift how you see.
+  subtitle: One day in Singapore. A sequence of moments where nothing feels staged — but everything is.
   cta: Request an introduction
   menu:
     - label: Principles

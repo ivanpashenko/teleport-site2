@@ -8,9 +8,9 @@ class WhyBlock extends HTMLElement {
       <section class="py-20 md:py-28">
         <div class="mx-auto max-w-[1240px] px-6 md:px-10">
           ${(title || text) ? `
-            <div class="max-w-[760px] text-left">
-              ${title ? `<h2 class="font-display text-[3rem] leading-[0.98] text-white md:text-[5.1rem]">${title}</h2>` : ''}
-              ${text ? `<p class="mt-5 max-w-[720px] text-[15px] leading-[1.75] text-white/50 md:text-[18px]">${text}</p>` : ''}
+            <div class="max-w-2xl text-left">
+              ${title ? `<h2 class="font-display text-4xl leading-tight text-primary md:text-5xl">${title}</h2>` : ''}
+              ${text ? `<p class="mt-5 text-sm leading-relaxed text-faded md:text-md">${text}</p>` : ''}
             </div>
           ` : ''}
 
@@ -32,10 +32,10 @@ class WhyBlock extends HTMLElement {
                   </div>
 
                   <div class="relative z-10 -mt-8 ${textWidth} pr-2 md:-mt-10 lg:-mt-12 ${index === 2 ? 'ml-auto pr-0' : 'pr-3 md:pr-4'}">
-                    <h3 class="${titleWidth} font-display text-[3rem] font-medium leading-[0.9] text-white md:text-[3.35rem] lg:text-[3.7rem]">
+                    <h3 class="${titleWidth} font-display text-3xl font-medium leading-tight text-white md:text-3xl lg:text-4xl">
                       ${item.title}
                     </h3>
-                    <p class="mt-5 w-[80%] text-[15px] leading-[1.55] text-white/38 md:w-[82%] md:text-[16px]">
+                    <p class="mt-5 w-[80%] text-sm leading-relaxed text-faded md:w-[82%] md:text-sm">
                       ${item.text}
                     </p>
                   </div>

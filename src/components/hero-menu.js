@@ -7,7 +7,7 @@ class HeroMenu extends HTMLElement {
       : 'left-0 -translate-x-full border-r border-white/10';
 
     this.innerHTML = `
-      <button type="button" class="hero-burger inline-block px-2 py-1 text-[11px] uppercase tracking-[0.28em] text-white/72 transition hover:text-white" aria-label="Open menu" aria-expanded="false">
+      <button type="button" class="hero-burger inline-block px-2 py-1 text-xs uppercase tracking-[0.28em] text-primary transition hover:text-primary" aria-label="Open menu" aria-expanded="false">
         Menu
       </button>
 
@@ -24,13 +24,13 @@ class HeroMenu extends HTMLElement {
 
           <nav class="flex flex-1 flex-col justify-center gap-8">
             ${menu.map((item) => `
-              <a href="${item.href}" class="hero-menu-link font-display text-4xl leading-none text-white/70 transition hover:text-white md:text-5xl">
+              <a href="${item.href}" class="hero-menu-link font-display text-3xl leading-tight text-primary transition hover:text-white md:text-4xl">
                 ${item.label}
               </a>
             `).join('')}
           </nav>
 
-          <div class="pt-10 text-[10px] uppercase tracking-[0.3em] text-white/30">Private access only</div>
+          <div class="pt-10 text-xs uppercase tracking-[0.3em] text-faded">Private access only</div>
         </div>
       </aside>
 

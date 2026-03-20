@@ -35,9 +35,9 @@ class ProcessSteps extends HTMLElement {
               <article class="process-step relative overflow-hidden border-t border-white/10 py-8 md:py-9 min-h-[150px] md:min-h-[168px] flex items-center" style="--process-glow:${item.glow || colors.glow}; --process-glow-soft:${item.glow_soft || colors.soft}; --process-glow-core:${item.glow_core || colors.core}; --process-glow-center:${glowCenter}%;">
                 <div class="pointer-events-none absolute inset-x-0 -bottom-20 h-40 process-step__glow"></div>
                 <div class="relative z-10 grid w-full gap-6 md:grid-cols-[6rem_minmax(0,1.1fr)_minmax(0,2fr)] md:gap-8 xl:gap-12 items-center">
-                  <p class="text-[11px] tracking-[0.2em] text-white/40">${item.step}</p>
-                  <h3 class="m-0 font-display text-[clamp(1.75rem,3vw,2.5rem)] leading-[1.12] text-white">${item.title}</h3>
-                  <p class="m-0 max-w-[56ch] text-[15px] leading-8 text-white md:text-base" style="color:rgba(255,255,255,0.72)">${item.text}</p>
+                  <p class="text-xs tracking-[0.2em] text-faded">${item.step}</p>
+                  <h3 class="m-0 font-display text-2xl leading-tight text-primary">${item.title}</h3>
+                  <p class="m-0 max-w-[56ch] text-sm leading-relaxed text-faded md:text-sm">${item.text}</p>
                 </div>
               </article>
             `;

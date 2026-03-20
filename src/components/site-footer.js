@@ -5,11 +5,11 @@ class SiteFooter extends HTMLElement {
         <div class="mx-auto flex max-w-7xl flex-col gap-10 px-6 md:px-10 md:flex-row md:items-end md:justify-between">
           <div class="flex items-center gap-4">
             <img src="assets/logo.svg" alt="Teleport" class="h-[7px] w-auto opacity-50 md:h-[10px]" />
-            <div class="text-[11px] uppercase tracking-[0.2em] text-white/30">
+            <div class="text-xs uppercase tracking-[0.2em] text-faded">
               Singapore · Immersive experience in the real world
             </div>
           </div>
-          <a href="mailto:screening@teleport.world" class="text-[11px] uppercase tracking-[0.2em] text-white/52 transition hover:text-white">
+          <a href="mailto:screening@teleport.world" class="text-xs uppercase tracking-[0.2em] text-faded transition hover:text-primary">
             screening@teleport.world
           </a>
         </div>

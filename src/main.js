@@ -56,9 +56,9 @@ function buildPrinciplesScene(items) {
             ${items.map((item, i) => `
               <article data-text-index="${i}" style="max-width:34rem; min-height:72vh; display:flex; flex-direction:column; justify-content:center; ${i === 0 ? 'margin-top:34vh;' : ''}">
                 <div style="display:inline-block; max-width:34rem;">
-                  <p style="font-size:12px;letter-spacing:0.24em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin:0 0 1rem; text-shadow:0 2px 18px rgba(0,0,0,0.5);">${item.note_label}</p>
-                  <h3 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.35rem,3.8vw,4.1rem);line-height:1.02;color:#fff;max-width:14ch;margin:0 0 1.25rem; text-shadow:0 6px 28px rgba(0,0,0,0.6);">${item.title}</h3>
-                  <p style="font-size:15px;line-height:1.65;color:rgba(255,255,255,0.64);max-width:34ch;margin:0; text-shadow:0 4px 22px rgba(0,0,0,0.58);">${item.text}</p>
+                  <p style="font-size:12px;letter-spacing:0.24em;text-transform:uppercase;color:var(--text-faded);margin:0 0 1rem; text-shadow:0 2px 18px rgba(0,0,0,0.5);">${item.note_label}</p>
+                  <h3 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.35rem,3.8vw,4.1rem);line-height:1.05;color:#fff;max-width:14ch;margin:0 0 1.25rem; text-shadow:0 6px 28px rgba(0,0,0,0.6);">${item.title}</h3>
+                  <p style="font-size:15px;line-height:1.625;color:var(--text-faded);max-width:34ch;margin:0; text-shadow:0 4px 22px rgba(0,0,0,0.58);">${item.text}</p>
                 </div>
               </article>
             `).join('')}
@@ -291,7 +291,7 @@ async function init() {
 
   const app = document.getElementById('app');
   app.innerHTML = `
-    <div class="min-h-screen bg-[var(--bg)] text-[var(--text)] antialiased selection:bg-white selection:text-black">
+    <div class="min-h-screen bg-[var(--bg)] text-primary antialiased selection:bg-white selection:text-black">
       <div class="pointer-events-none fixed inset-0 opacity-10 mix-blend-soft-light" style="background-image:url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"140\" height=\"140\" viewBox=\"0 0 140 140\"><filter id=\"n\"><feTurbulence type=\"fractalNoise\" baseFrequency=\"0.85\" numOctaves=\"2\" stitchTiles=\"stitch\"/></filter><rect width=\"140\" height=\"140\" filter=\"url(%23n)\" opacity=\"0.45\"/></svg>');"></div>
       <site-header
         menu='${JSON.stringify(data.hero.menu || [])}'
@@ -352,10 +352,10 @@ async function init() {
         <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(3,3,3,0.3),rgba(3,3,3,0.12)_22%,rgba(3,3,3,0.16)_50%,rgba(3,3,3,0.86)_100%)]"></div>
         <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_42%),linear-gradient(180deg,rgba(255,255,255,0.04),transparent_22%,transparent_66%,rgba(255,255,255,0.03))]"></div>
         <div class="relative z-10 mx-auto max-w-4xl px-6 md:px-10">
-          <p class="mb-5 text-[10px] uppercase tracking-[0.22em] text-white/42">${data.final.eyebrow}</p>
-          <h2 class="font-display text-4xl leading-[1] text-white md:text-6xl">We do not sell tickets.<br>We shift reality.</h2>
+          <p class="mb-5 text-xs uppercase tracking-[0.22em] text-faded">${data.final.eyebrow}</p>
+          <h2 class="font-display text-3xl leading-tight text-primary md:text-4xl">We do not sell tickets.<br>We shift reality.</h2>
           <div class="mt-10">
-            <a href="mailto:screening@teleport.world" class="inline-block border border-white/20 px-8 py-4 text-[11px] uppercase tracking-[0.24em] text-white transition hover:bg-white hover:text-black">${data.final.cta}</a>
+            <a href="mailto:screening@teleport.world" class="inline-block border border-white/20 px-8 py-4 text-xs uppercase tracking-[0.24em] text-primary transition hover:bg-white hover:text-black">${data.final.cta}</a>
           </div>
         </div>
       </section>

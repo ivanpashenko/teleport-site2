@@ -15,14 +15,14 @@ class ReviewsStrip extends HTMLElement {
                 <article class="grid gap-10 border-b border-white/10 py-10 md:grid-cols-[minmax(0,0.82fr)_minmax(0,1.18fr)] md:gap-12 md:py-14">
                   <div class="pr-2 md:pr-10">
                     <div class="flex items-start gap-4 md:gap-5">
-                      <span class="mt-0.5 font-display text-[2.1rem] leading-none text-white md:text-[3rem]">”</span>
-                      <h3 class="max-w-[18ch] font-display text-[2.05rem] leading-[0.96] text-white md:text-[3.05rem]">${item.headline || item.quote}</h3>
+                      <span class="mt-0.5 font-display text-xl leading-tight text-primary md:text-3xl">”</span>
+                      <h3 class="max-w-[18ch] font-display text-xl leading-tight text-primary md:text-3xl">${item.headline || item.quote}</h3>
                     </div>
                   </div>
 
                   <div class="max-w-[56rem] pt-1">
-                    <p class="text-[15px] leading-[1.42] text-white/28 md:text-[15px]">${item.quote}</p>
-                    <div class="mt-7 text-[11px] uppercase leading-[1.2] tracking-[0.03em] text-white/38 md:mt-8">
+                    <p class="text-sm leading-relaxed text-faded md:text-sm">${item.quote}</p>
+                    <div class="mt-7 text-xs uppercase leading-relaxed tracking-[0.03em] text-faded md:mt-8">
                       <p>${name}</p>
                       <p>${role}</p>
                     </div>

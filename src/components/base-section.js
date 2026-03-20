@@ -17,9 +17,9 @@ class BaseSection extends HTMLElement {
         <div class="mx-auto max-w-7xl px-6 md:px-10">
           ${!noWrap ? `
             <div class="max-w-3xl">
-              ${eyebrow ? `<p class="mb-4 text-[11px] uppercase tracking-[0.35em] text-white/40">${eyebrow}</p>` : ''}
-              ${title ? `<h2 class="font-display text-4xl leading-[1.05] text-white md:text-6xl">${title}</h2>` : ''}
-              ${intro ? `<p class="mt-6 text-base leading-relaxed text-white/60 md:text-lg">${intro}</p>` : ''}
+              ${eyebrow ? `<p class="mb-4 text-xs uppercase tracking-[0.35em] text-faded">${eyebrow}</p>` : ''}
+              ${title ? `<h2 class="font-display text-4xl leading-tight text-primary md:text-6xl">${title}</h2>` : ''}
+              ${intro ? `<p class="mt-6 text-sm leading-relaxed text-faded md:text-md">${intro}</p>` : ''}
             </div>
             <div class="mt-12">
               ${inner}
