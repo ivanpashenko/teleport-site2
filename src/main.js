@@ -27,52 +27,51 @@ function buildPrinciplesScene(items) {
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   scene.innerHTML = `
-    <div class="principles-track" style="position:relative; display:flex; align-items:flex-start;">
-
-      <!-- Left: scrolling text -->
-      <div class="principles-text-col" style="width:44%; padding:10vh 2rem 10vh 2.5rem; position:relative; z-index:2;">
-        <div style="display:flex; flex-direction:column; gap:22vh; padding-bottom:38vh;">
-          ${items.map((item, i) => `
-            <article data-text-index="${i}" style="max-width:34rem; min-height:72vh; display:flex; flex-direction:column; justify-content:center; ${i === 0 ? 'margin-top:56vh;' : ''}">
-              <p style="font-size:12px;letter-spacing:0.24em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin:0 0 1rem;">${item.note_label}</p>
-              <h3 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.35rem,3.8vw,4.1rem);line-height:1.02;color:#fff;max-width:14ch;margin:0 0 1.25rem;">${item.title}</h3>
-              <p style="font-size:15px;line-height:1.65;color:rgba(255,255,255,0.58);max-width:34ch;margin:0;">${item.text}</p>
-            </article>
-          `).join('')}
-        </div>
-      </div>
-
-      <!-- Right: sticky image -->
-      <div class="principles-image-col" style="width:56%; position:sticky; top:0; height:100vh; display:flex; align-items:center; justify-content:flex-end; padding:2rem 0 2rem 0; will-change:transform,opacity;">
-        <div style="position:relative; width:100%; aspect-ratio:16/10; overflow:hidden; border:1px solid rgba(255,255,255,0.1);">
-          ${items.map((item, i) => `
-            <img
-              data-img-index="${i}"
-              src="${item.image}"
-              alt=""
-              style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;
-                     opacity:${i === 0 ? 1 : 0};"
-            />
-          `).join('')}
-          <canvas class="principles-canvas" aria-hidden="true"
-            style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2;">
-          </canvas>
-          <div class="principles-fade-overlay" style="
-            position:absolute;inset:0;background:#050505;opacity:0;z-index:3;
-            pointer-events:none;
-          "></div>
+    <section class="relative overflow-visible px-0 md:px-10">
+      <div class="mx-auto max-w-7xl overflow-visible md:px-0">
+        <div class="principles-image-col" style="margin-left:auto; margin-top:-14vh; width:75%; position:sticky; top:0; height:100vh; display:flex; align-items:flex-start; justify-content:flex-end; padding:18vh 1rem 2rem 0; will-change:transform,opacity; z-index:1;" data-mobile-image-col>
+          <div class="principles-image-frame" style="position:relative; width:100%; aspect-ratio:16/10; overflow:hidden; border:1px solid rgba(255,255,255,0.1);">
+            ${items.map((item, i) => `
+              <img
+                data-img-index="${i}"
+                src="${item.image}"
+                alt=""
+                style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;
+                       opacity:${i === 0 ? 1 : 0};"
+              />
+            `).join('')}
+            <canvas class="principles-canvas" aria-hidden="true"
+              style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2;">
+            </canvas>
+            <div class="principles-fade-overlay" style="
+              position:absolute;inset:0;background:#050505;opacity:0;z-index:3;
+              pointer-events:none;
+            "></div>
+          </div>
         </div>
 
-
+        <div class="principles-text-col" style="position:relative; z-index:3; width:min(72%, 46rem); margin-top:-100vh; padding:2vh 0 4vh 1.5rem; overflow:visible;">
+          <div style="display:flex; flex-direction:column; gap:22vh; padding-bottom:12vh;">
+            ${items.map((item, i) => `
+              <article data-text-index="${i}" style="max-width:34rem; min-height:72vh; display:flex; flex-direction:column; justify-content:center; ${i === 0 ? 'margin-top:34vh;' : ''}">
+                <div style="display:inline-block; max-width:34rem;">
+                  <p style="font-size:12px;letter-spacing:0.24em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin:0 0 1rem; text-shadow:0 2px 18px rgba(0,0,0,0.5);">${item.note_label}</p>
+                  <h3 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.35rem,3.8vw,4.1rem);line-height:1.02;color:#fff;max-width:14ch;margin:0 0 1.25rem; text-shadow:0 6px 28px rgba(0,0,0,0.6);">${item.title}</h3>
+                  <p style="font-size:15px;line-height:1.65;color:rgba(255,255,255,0.64);max-width:34ch;margin:0; text-shadow:0 4px 22px rgba(0,0,0,0.58);">${item.text}</p>
+                </div>
+              </article>
+            `).join('')}
+          </div>
+        </div>
       </div>
-
-    </div>
+    </section>
   `;
 
   const canvas   = scene.querySelector('.principles-canvas');
   const fadeEl   = scene.querySelector('.principles-fade-overlay');
   const imageCol = scene.querySelector('.principles-image-col');
   const textCol  = scene.querySelector('.principles-text-col');
+  const mobileImageCol = scene.querySelector('[data-mobile-image-col]');
   const imgEls   = [...scene.querySelectorAll('[data-img-index]')];
   const textEls  = [...scene.querySelectorAll('[data-text-index]')];
   const dotEls   = [...scene.querySelectorAll('[data-dot-index]')];
@@ -231,9 +230,9 @@ function buildPrinciplesScene(items) {
 
     if (visibleIndex < textEls.length - 1) {
       const passed = Math.max(0, -currentDelta);
-      const blackoutStart = vh * 0.135;
-      const blackoutPeak  = vh * 0.155;
-      const blackoutEnd   = vh * 0.175;
+      const blackoutStart = vh * 0.27;
+      const blackoutPeak  = vh * 0.315;
+      const blackoutEnd   = vh * 0.36;
 
       if (passed <= blackoutStart) {
         fadeT = 0;
